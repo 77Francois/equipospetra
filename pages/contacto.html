@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/static/css/style_contacto.css">
+</head>
+
+<body>
+    <h1>Complete la informacion</h1>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend><b>Datos personales</b></legend>
+            <label for="nombre">Nombre: <!--<input type="text"> puedo ponerlo aca adentro--></label>
+            <input type="text" id="" name="" size="10" maxlength="15" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="" name="" size="10" maxlength="15" required> <br><br>
+            <label for="dni">DNI</label>
+            <input type="number" name="dni" id="">
+            <label for="tram_dni">Nº de tramite</label>
+            <input type="password" name="tram_dni" id="">
+            <label for="fec_nac">Fecha de nacimiento: <input type="date" name="fec_nac" id=""> [*]</label>
+            <!-- <input type="date" name="fec_nac" id=""> lo comente para hacerlo dentro del <label>-->
+            <br><br>
+            <label for="estatura">Estatura</label>
+            <select name="estatura" id="">
+                <option value="baja">Baja</option>
+                <option value="mediana">Mediana</option>
+                <option value="alta">Alta</option>
+                <option value="sup_alta" disabled>Super alta</option>
+                <!-- disabled se usa para dejar que se vea pero no que se pueda manipular o usar-->
+
+            </select> <br><br>
+            <label for="correo">E-mail</label>
+            <input type="email" name="correo" id="">
+            <label for="adjunto">Adjuntar foto</label>
+            <input type="file" name="adjunto" id="">
+            <br><br><br>
+        </fieldset><br><br>
+        <br><br>
+        <label for="comentario">Escriba su consulta</label> <br>
+        <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escriba aqui su consulta:"></textarea>
+        <!--placeholder me sirve para agregar comentarios dentro de los "input" o "textarea"-->
+        <br><br>
+        <label for="turno">Seleccione el horario</label> <br>
+        <select name="turno" id="" size="1">
+            <option value="1">Mañana</option>
+            <option value="2">Tarde</option>
+            <option value="3">Vespertino</option>
+            <option value="4">Noche</option>
+        </select> 
+        <br><br><br>
+        <label for="cp">Conocimientos previos</label>
+        <input type="checkbox" name="cp" id="" value="1">HTML
+        <input type="checkbox" name="cp" id="" value="2">CSS
+        <input type="checkbox" name="cp" id="" value="3">JavaScript
+        <input type="checkbox" name="cp" id="" value="4">Ninguno
+        <br><br>
+        <label for="rb">Zona de residencia</label>
+        <input type="radio" name="rd" id="" value="1">CABA
+        <input type="radio" name="rd" id="" value="2">Gran Bs. As.
+        <input type="radio" name="rd" id="" value="3">Provincia de Bs. As.
+        <input type="radio" name="rd" id="" value="4">Interior del pais
+        <br><br>
+        <input type="checkbox" name="condiciones" id="" required>Acepto terminos y condiciones 
+        <br>
+        <br>
+        <input type="submit" value="Enviar Datos">   <!--Boton para enviar el formulario-->
+        <input type="reset" value="Borrar">  <!-- Boton para borrar el formulario-->
+        <br>
+        <br>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,945 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    /* background: whitesmoke; */
+    background-image: url(https://img.freepik.com/vector-premium/fondo-cuadros-gris-blanco_146714-3034.jpg?w=900);
+    
+    overflow-x: hidden;
+}
+
+.barra_superior {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(6, 6, 149);
+    justify-content: space-between;
+    position: fixed;
+}
+
+.barra_superior img {
+    line-height: 55px;
+    margin-right: 30px;
+
+}
+
+
+#marca {
+    vertical-align: middle;
+    color: rgb(204, 200, 200);
+    margin-left: 25px;
+    font-family: "Grenze Gotisch", serif;
+    font-size: 40px;
+}
+
+
+
+
+/**************************************************************Menu lateral****************************************************************/
+.navegacion-lateral {
+    margin-left: 2px;
+    /* height: 400px; */
+    width: 230px;
+    background-color: rgb(37, 26, 134);
+    /*position: fixed;   esto sirve para que el menu quede fijo en la posicion que esta auque se escrolee, aca no tiene sentido usarlo*/
+    border-radius: 3px;
+}
+
+
+
+
+.navegacion-lateral ul {
+    list-style: none;      /*saque los puntos de la lista*/
+    /*justify-content: space-between;*/
+    
+}
+.navegacion-lateral > ul > li{
+    position: relative;
+}
+
+.menu-lateral>li>a {
+    display: block;
+    /*les damos bloques*/
+    padding: 25px;
+    color: black;
+    font-family: 'Arial Narrow Bold';
+    /*cambiar por uno mejor*/
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.menu-lateral>li>a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+
+.menu-lateral li a:hover {
+    /*tengo que fucionarla con la de arriba*/
+
+    transition: all .3s;
+}
+
+.menu-lateral li:hover .submenu-lateral {
+    display: block;
+    visibility: visible;
+    /*este reeemplaza al "display" para poder darle un efecto*/
+    opacity: 1;
+    transition: all .6s;
+    background-color: rgba(85, 46, 214, 0.242);
+
+}
+
+.menu-lateral li .submenu-lateral {
+    padding: 15px;
+    margin-left: 40px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/************************************************video de la empresa*********************************************************/
+
+.contenedor-menu-lateral-video {
+    display: flex;
+
+}
+
+.contenedor-video-central {
+    display: block;
+    margin-left: 280px;
+    /*border: black solid 3px;*/
+}
+
+/*falta preguntar como eliminar la separacon entre video y comentario*/
+.comentario-video {
+    padding-bottom: 8px;
+    font-size: 28px;
+    font-family: cursive;
+    color: rgb(18, 10, 18);
+    background-color: rgb(220, 167, 68);
+}
+
+.comentario-video p {
+    text-align: center;
+    /*envio el texto al centro*/
+}
+
+/******************************************************submenu lateral****************************************************/
+.submenu-lateral {
+    position: flex;
+    visibility: hidden;
+    /*este reeemplaza al "display" para poder darle un efecto*/
+
+    transition: opacity 1s;
+    border-radius: 3px;
+    display: none;
+}
+
+.submenu-lateral li {
+    display: block;
+
+}
+
+.submenu-lateral li a {
+    display: block;
+    /*coloco las "subsolapas" en bloque*/
+    padding: 15px;
+    /* les dio 15px a todos los lado*/
+    font-size: 18px;
+    color: black;
+    /*las letras son blancas ahora*/
+    text-decoration: none;
+    /*saco el subrayado*/
+    transition: all 0.5s;
+}
+
+.submenu-lateral>li>a:hover {
+    color: #fff !important;
+    cursor: pointer;
+}
+
+/******************************************************uso flex****************************************/
+#titulo {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 60px;
+    background-color: rgb(131, 131, 182);
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+
+#titulo>h1 {
+    font-family: monospace;
+    color: white;
+}
+
+.productos {
+    /*es el contenedor de todas las imagenes mas info*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: rgb(134, 134, 205); */
+    background-image: url(https://images.pexels.com/photos/1571442/pexels-photo-1571442.jpeg);
+    margin-left: 2px;
+    /* margin-right: 2px; */
+}
+
+.imagen_producto {
+    /*el contenido*/
+    background: rgb(148, 146, 146);
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 31%;
+    /*1/3 de pantalla para cada imagen*/
+    border: 2px solid black;
+}
+
+.imagen_producto a figure img {
+    /* display: block; */
+    margin: 4px;
+    border: 0;
+    /* no tiene borde */
+    width: 98%;
+    /* ocupa todo el ancho disponible*/
+    height: auto;
+    /* se adaptar a lo que lo voy achicando*/
+}
+
+.imagen_producto>h2 {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.referencia_producto p {
+    margin-left: 7px;
+    margin-right: 7px;
+    color: black;
+
+}
+
+.pie_refrigeracion {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 40px;
+    background-color: rgb(131, 131, 182);
+    color: whitesmoke;
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+
+}
+
+/************************************************************info y video***************************************************************/
+#info_video {
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 220px;
+
+
+}
+
+.nota {
+    width: 300px;
+    height: auto;
+    padding-right: 10%;
+    /* border: 2px solid rgb(18, 18, 167); */
+    /* padding-left: 30px; */
+    text-align: center;
+    align-content: center;
+}
+
+.nota h3 {
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.video-refrigeracion {
+    padding-top: 4px;
+
+}
+
+/*********************************************************generadores industriales***************************************/
+#titulo_gei {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 60px;
+    background-color: rgb(96, 11, 33);
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+
+#titulo_gei > h1 {
+    font-family: monospace;
+    color: white;
+}
+
+.generadores_ind {
+    /*es el contenedor de todas las imagenes mas info*/
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: rgb(134, 134, 205); */
+    background-image: url(https://images.pexels.com/photos/6312517/pexels-photo-6312517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    margin-left: 2px;
+    /* margin-right: 2px; */
+}
+
+.imagen_gen_ind {
+    /*el contenido*/
+    background: rgb(182, 90, 90);
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    /* margin: 1em 2em; */
+    border-radius: 0px 6px 9px 14px;
+    width: 20%;
+    /*1/2 de pantalla para cada imagen*/
+    border: 2px solid rgb(67, 64, 64);
+
+}
+
+.imagen_gen_ind a figure img {
+    margin: 4px;
+    border: 0;
+    /* no tiene borde */
+    width: 97%;
+    /* ocupa todo el ancho disponible*/
+    max-height: 350px;
+    max-width: 350px;
+    /* height: auto; */
+    /* se adaptar a lo que lo voy achicando*/
+}
+
+.imagen_gen_ind > h2 {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(40, 2, 2);
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+
+
+.pie_generadores_ind {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 40px;
+    background-color: rgb(96, 11, 33);
+    color: whitesmoke;
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+/***************************************************************generadores demesticos******************************************************/
+#titulo_ged {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 60px;
+    background-color: rgb(101, 85, 2);
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+
+#titulo_ged > h1 {
+    font-family: monospace;
+    color: rgb(22, 15, 3);
+}
+.generadores_dom {
+    /*es el contenedor de todas las imagenes mas info*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin-left: 2px;
+    background-image: url(https://img.freepik.com/fotos-premium/estrategias-que-puedo-utilizar-ahorrar-energia-reducir-ia-generativa_1198230-107109.jpg?w=740);
+       
+}
+
+.imagen_gen_dom {
+    background: rgb(200, 168, 86);
+    margin: 5px 33%;
+    height: auto;
+    border-radius: 0 0 14px 14px;
+    max-width: 33%;
+    border: 2px solid rgb(54, 46, 22);
+    -webkit-border-radius: 0 0 14px 14px;
+    -moz-border-radius: 0 0 14px 14px;
+    -ms-border-radius: 0 0 14px 14px;
+    -o-border-radius: 0 0 14px 14px;
+}
+
+.imagen_gen_dom a figure img {
+    margin-top: 4px;
+    margin-left: 6.5px;
+    border: 0;
+    width: 97%;
+    max-height: 350px;
+    max-width: 100%;
+   
+}
+
+.imagen_gen_dom > h2 {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(1, 11, 4);
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.pie_generadores_dom {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 40px;
+    background-color: rgb(101, 85, 2);
+    color: rgb(22, 15, 3);
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+/***************************************************************** UPS ***************************************************************************/
+#titulo_ups {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 60px;
+    background-color: rgb(7, 7, 88);
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+
+#titulo_ups > h1 {
+    font-family: monospace;
+    color: whitesmoke;
+}
+.ups {
+    /*es el contenedor de todas las imagenes mas info*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin-left: 2px;
+    background-image: url(https://sysracks.com/wp-content/uploads/2024/06/rack-19-pulgadas-medidas-1024x585.webp);
+   
+}
+
+.imagen_ups {
+    background: rgb(82, 82, 211);
+    margin: 5px 33%;
+    height: auto;
+    border-radius: 0 0 14px 14px;
+    max-width: 33%;
+    border: 2px solid rgb(54, 46, 22);
+    -webkit-border-radius: 0 0 14px 14px;
+    -moz-border-radius: 0 0 14px 14px;
+    -ms-border-radius: 0 0 14px 14px;
+    -o-border-radius: 0 0 14px 14px;
+}
+
+.imagen_ups a figure img {
+    margin-top: 4px;
+    margin-left: 6.5px;
+    border: 0;
+    width: 97%;
+    max-height: 350px;
+    max-width: 100%;
+   
+}
+
+.imagen_ups > h2 {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(1, 11, 4);
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.pie_ups {
+    text-align: center;
+    /*llevo el texto al medio de la pagina*/
+    width: 100%;
+    height: 40px;
+    background-color: rgb(7, 7, 88);
+    color: whitesmoke;
+    align-content: center;
+    /*centra verticalmente el contenido*/
+    margin-left: 2px;
+}
+/****************************************************************footer************************************************************/
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: rgb(6, 6, 149);
+    padding: 80px 0;
+}
+
+.footer_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_link {
+    width: 25%;
+    margin-left: 40px;
+    padding: 0 15px;
+}
+
+.footer_link h4 {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 25px;
+    /* font-weight: 500; */
+    border-bottom: 2px solid #176fa1;
+    padding-bottom: 10px;
+    transition: font-size 1s;
+} 
+
+.footer_link h4:hover {
+    font-size: 30px;
+}
+
+.footer_link ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(167, 176, 184);
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer_link ul li a:hover {
+    color: #c1baba;
+    padding-left: 6px;
+}
+
+.redes_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.redes_link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgb(16, 8, 60);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+
+.redes_link a:hover {
+    background-color: black;
+}
+/************************************************** boton volver ***************************************************************/
+.boton{
+    position: fixed;  /*lo fijo a la posicion de 350px respecto del limite inferior*/
+    /*bottom: 320px;  lo elevo 350px ya que el pie de pagina tiene 300px */
+    bottom: 100px;
+    right: 50px;  /*lo alejo 50px del lateral derecho*/
+    height: 35px;
+    width: 35px;
+    font-size: 45px; 
+}
+.boton a i{
+    /* border: black solid 2px; */
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+} 
+.boton i:hover{
+    color: rgb(243, 6, 6);
+}
+/*********************************************************** Version para tablet *************************************************************/
+@media screen and (min-width: 600px) and (max-width: 1023px) {    /*Uso como referencia ipad pro*/ 
+
+    
+    #info_video {
+        background-color: orange;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 30px;
+    }
+    .video-refrigeracion iframe {
+       width: 390px;
+       height: 250px;
+    }
+    /**************************************************** Generadores industriales *********************************************/
+    .imagen_gen_ind {
+        background: rgb(182, 90, 90);
+        margin-bottom: 1em;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-radius: 0px 6px 9px 14px;
+        width: 20%;
+        border: 2px solid rgb(67, 64, 64);
+    }
+    .imagen_gen_ind a figure img {
+        margin: 4px;
+        border: 0;
+        width: 94%;
+        max-height: 350px;
+        max-width: 350px;
+    }
+    .imagen_gen_ind > h2 {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(40, 2, 2);
+        color: white;
+        text-align: center;
+        align-content: center;
+        font-size: 18px;
+    }
+    .referencia_producto{
+        font-size: 12px;
+    }
+    /**************************************************** Generadores domesticos *********************************************/
+    .generadores_dom {
+        /*es el contenedor de todas las imagenes mas info*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 35vh;
+        margin-left: 2px;
+        background-image: url(https://img.freepik.com/fotos-premium/estrategias-que-puedo-utilizar-ahorrar-energia-reducir-ia-generativa_1198230-107109.jpg?w=740);
+           
+    }
+    /***************************************************** UPS *******************************************************************/
+    .ups {
+        /*es el contenedor de todas las imagenes mas info*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 35vh;
+        margin-left: 2px;
+        background-image: url(https://sysracks.com/wp-content/uploads/2024/06/rack-19-pulgadas-medidas-1024x585.webp);
+       
+    }
+    /****************************************************************** Footer *******************************************************/
+    .footer_link {
+        width: 27%;
+        margin-left: 40px;
+        padding: 0 10px;
+    }
+    
+    .footer_link h4 {
+        display: inline-block;
+        font-size: 19px;
+        color: #fff;
+        margin-bottom: 25px;
+        /* font-weight: 500; */
+        border-bottom: 2px solid #176fa1;
+        padding-bottom: 10px;
+        transition: font-size 1s;
+    } 
+    
+    .footer_link h4:hover {
+        font-size: 25px;
+    }
+    .footer_link ul li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: rgb(167, 176, 184);
+        display: block;
+        margin-bottom: 15px;
+        transition: all .3s ease;
+    }
+    
+    .footer_link ul li a:hover {
+        color: #f2e609;
+        padding-left: 6px;
+    }
+}
+/************************************************************************** media query para celular ************************************************/
+
+@media screen and (max-width: 599px) {     /* Media query para pantallas hasta 767px usamos iphone SE como modelo */
+    .barra_superior {
+        display: flex;
+        height: 80px;
+        width: 100%;
+        background-color: rgb(6, 6, 149);
+        justify-content: space-between;
+        position: sticky;
+    }
+    /**************************************************************Menu lateral****************************************************************/
+    .navegacion-lateral {
+        margin-left: 2px;
+        width: 99%;
+        background-color: rgb(37, 26, 134);
+        /*position: fixed;   esto sirve para que el menu quede fijo en la posicion que esta auque se escrolee, aca no tiene sentido usarlo*/
+        border-radius: 3px;
+    }
+    .menu-lateral>li>a {
+        display: block;
+        /*les damos bloques*/
+        padding: 25px;
+        color: black;
+        font-family: 'Arial Narrow Bold';
+        /*cambiar por uno mejor*/
+        font-size: 26px;
+        text-decoration: none;
+    }
+
+    /**************************************************** Refrigeracion **********************************************************/
+    .productos {
+        /*es el contenedor de todas las imagenes mas info*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* background-color: rgb(134, 134, 205); */
+        background-image: url(https://images.pexels.com/photos/1571442/pexels-photo-1571442.jpeg);
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+    
+    .imagen_producto {
+        /*el contenido*/
+        background: rgb(148, 146, 146);
+        margin-bottom: 1em;
+        margin-top: 1em;
+        width: 48%; /*1/2 de pantalla para cada imagen*/
+        border: 2px solid black;
+    }
+    
+    .imagen_producto a figure img {
+        /*display: block;*/
+        margin: 4px;
+        width: 95%;
+}
+    
+    .imagen_producto>h2 {
+        width: 100%;
+        height: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+    }
+    
+    .referencia_producto p {
+        margin-left: 7px;
+        margin-right: 7px;
+        color: black;
+        font-size: 14px;
+    
+    }
+    
+    .pie_refrigeracion {
+        text-align: center;
+        width: 99%;
+        height: 40px;
+        background-color: rgb(131, 131, 182);
+        color: rgb(14, 12, 12);
+        align-content: center;
+        margin-left: 2px;
+        font-size: 20px;
+    }
+    /************************************************video de la empresa*********************************************************/
+    #info_video {
+        background-color: orange;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 5px;
+    }
+    .video-refrigeracion iframe {
+       width: 360px;
+       height: 250px;
+    }
+    .nota > p{
+        margin-left: 80px;
+    }
+    
+    .nota h3 {
+        margin-left: 80px;
+        font-size: 21px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /**************************************************** Generadores industriales *********************************************/
+    .imagen_gen_ind {
+        background: rgb(182, 90, 90);
+        margin-bottom: 1em;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-radius: 0px 6px 9px 14px;
+        width: 41%;
+        border: 2px solid rgb(67, 64, 64);
+    }
+    .imagen_gen_ind a figure img {
+        margin: 4px;
+        border: 0;
+        width: 94%;
+        max-height: 350px;
+        max-width: 350px;
+    }
+    .imagen_gen_ind > h2 {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(40, 2, 2);
+        color: white;
+        text-align: center;
+        align-content: center;
+        font-size: 16px;
+    }
+    .referencia_producto{
+        font-size: 11px;
+    }
+    /**************************************************** Generadores domesticos *********************************************/
+    .generadores_dom {
+        /*es el contenedor de todas las imagenes mas info*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 35vh;
+        margin-left: 2px;
+        background-image: url(https://img.freepik.com/fotos-premium/estrategias-que-puedo-utilizar-ahorrar-energia-reducir-ia-generativa_1198230-107109.jpg?w=740);       
+    }
+    .imagen_gen_dom {
+        background: rgb(200, 168, 86);
+        margin: 5px;
+        height: auto;
+        border-radius: 0 0 14px 14px;
+        max-width: 73%;
+        border: 2px solid rgb(54, 46, 22);
+        -webkit-border-radius: 0 0 14px 14px;
+        -moz-border-radius: 0 0 14px 14px;
+        -ms-border-radius: 0 0 14px 14px;
+        -o-border-radius: 0 0 14px 14px;
+    }
+    
+    .imagen_gen_dom a figure img {
+        margin-top: 4px;
+        margin-left: 6.5px;
+        border: 0;
+        width: 95%;
+        max-height: 350px;
+        max-width: 100%;
+       
+    }
+    
+
+    /***************************************************** UPS *******************************************************************/
+    .ups {
+        /*es el contenedor de todas las imagenes mas info*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 35vh;
+        margin-left: 2px;
+        background-image: url(https://sysracks.com/wp-content/uploads/2024/06/rack-19-pulgadas-medidas-1024x585.webp);
+       
+    }
+    .imagen_ups {
+        background: rgb(82, 82, 211);
+        margin: 5px;
+        height: auto;
+        border-radius: 0 0 14px 14px;
+        max-width: 73%;
+        border: 2px solid rgb(54, 46, 22);
+        -webkit-border-radius: 0 0 14px 14px;
+        -moz-border-radius: 0 0 14px 14px;
+        -ms-border-radius: 0 0 14px 14px;
+        -o-border-radius: 0 0 14px 14px;
+    }
+    
+    .imagen_ups a figure img {
+        margin-top: 4px;
+        margin-left: 6.5px;
+        border: 0;
+        width: 95%;
+        max-height: 350px;
+        max-width: 100%;
+       
+    }
+    
+    .imagen_ups > h2 {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(1, 11, 4);
+        color: white;
+        text-align: center;
+        align-content: center;
+    }
+    /****************************************************************** Footer *******************************************************/
+    .footer_row {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_link {
+        width: 67%;
+        margin-left: 40px;
+        padding: 0 10px;
+    }
+    
+    .footer_link h4:hover {
+        font-size: 28px;
+    }
+    .redes_link a {
+        display: inline-block;
+        min-height: 40px;
+        width: 40px;
+        background-color: rgb(243, 17, 17);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50px;
+        color: #fff;
+        transition: all .5s ease;
+    }
+    .footer_link ul li a {
+        font-size: 16px;
+        text-decoration: none;
+        color: rgb(167, 176, 184);
+        display: block;
+        margin-bottom: 15px;
+        transition: all .3s ease;
+    }
+    
+    .footer_link ul li a:hover {
+        color: #f2e609;
+        padding-left: 6px;
+    }
+
+
+}
