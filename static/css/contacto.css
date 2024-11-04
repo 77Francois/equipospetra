@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    /* background: whitesmoke; */
+    background-image: url(https://img.freepik.com/vector-premium/fondo-cuadros-gris-blanco_146714-3034.jpg?w=900);
+    overflow-x: hidden;
+}
+
+.barra_superior {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(6, 6, 149);
+    justify-content: space-between;
+    position: fixed;
+}
+
+.barra_superior img {
+    line-height: 55px;
+    margin-right: 30px;
+
+}
+
+#marca {
+    vertical-align: middle;
+    color: rgb(204, 200, 200);
+    margin-left: 25px;
+    font-family: "Grenze Gotisch", serif;
+    font-size: 40px;
+}
+
+/******************************************** Contenedor de formulario de contacto *******************************************/
+.contenedor_form {
+    background-color: rgb(6, 85, 149);
+
+    display: block;
+    height: auto;
+    width: 380px;
+    border: black solid 3px;
+    border-radius: 13px;
+    margin-left: 490px;
+}
+
+.contacto-items {
+    display: flex;
+    flex-direction: column;
+}
+div {
+    font-size: 15px;
+    padding: 7px 0px 7px 10px; 
+}
+
+input {
+    border-radius: 12px;
+    height: 25px;
+    width: 340px;
+    cursor: pointer;
+    color: rgb(61, 61, 169);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#term-cond{
+    width: 15px;
+    height: 15px;
+}
+h2 {
+    margin-top: 7px;
+    margin-bottom: 15px;
+    color: aliceblue;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: black;
+}
+
+input:hover{
+    background: rgb(166, 153, 153);
+}
+
+.boton-enviar {
+    margin-left: 15px;
+    background: black;
+    color: white;
+    border: white solid 2px;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    padding: 7px;
+    cursor: pointer;
+}
+.boton-reset{
+    margin-left: 15px;
+    background: black;
+    color: white;
+    border: white solid 2px;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+/*************************************************** Boton regresar ******************************************/
+.boton {
+    display: block;
+    width: 100%;   
+}
+.boton-volver {
+    margin-left: 635px;
+    font-size: 21px;
+    background: transparent;
+    border-radius: 3px;    
+}
+.boton-volver:hover{
+    background-color: rgb(6, 85, 149);
+}
+.texto {
+    padding: 7px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.texto:hover{
+    color: black;
+}
+
+@media screen and (max-width: 599px) {
+    .contenedor_form {
+        width: 342px;
+        margin-left: 15px;
+    }
+    input{
+        width: 255px;
+    }
+    #textarea{
+        width: 295px;;
+    }
+    .boton-volver {
+        margin-left: 135px;
+    }
+    
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) { 
+   
+    .contenedor_form {
+        margin-left: 245px;
+       
+        
+    } 
+    .boton-volver {
+        margin-left: 390px;
+    }
+    
+}
+

@@ -4,80 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="/static/css/style_contacto.css">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="../static/css/contacto.css">
 </head>
-
+<header>
+    <div class="barra_superior">
+        <h1 id="marca">Contacto</h1>
+        <img src="../static/img/bandera.png" alt="Logo de la empresa">
+    </div>
+</header>
+<br>
+<br>
+<br>
+<br>
 <body>
-    <h1>Complete la informacion</h1>
-
-    <form action="" method="post">
-        <fieldset>
-            <legend><b>Datos personales</b></legend>
-            <label for="nombre">Nombre: <!--<input type="text"> puedo ponerlo aca adentro--></label>
-            <input type="text" id="" name="" size="10" maxlength="15" required>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="" name="" size="10" maxlength="15" required> <br><br>
-            <label for="dni">DNI</label>
-            <input type="number" name="dni" id="">
-            <label for="tram_dni">Nº de tramite</label>
-            <input type="password" name="tram_dni" id="">
-            <label for="fec_nac">Fecha de nacimiento: <input type="date" name="fec_nac" id=""> [*]</label>
-            <!-- <input type="date" name="fec_nac" id=""> lo comente para hacerlo dentro del <label>-->
-            <br><br>
-            <label for="estatura">Estatura</label>
-            <select name="estatura" id="">
-                <option value="baja">Baja</option>
-                <option value="mediana">Mediana</option>
-                <option value="alta">Alta</option>
-                <option value="sup_alta" disabled>Super alta</option>
-                <!-- disabled se usa para dejar que se vea pero no que se pueda manipular o usar-->
-
-            </select> <br><br>
-            <label for="correo">E-mail</label>
-            <input type="email" name="correo" id="">
-            <label for="adjunto">Adjuntar foto</label>
-            <input type="file" name="adjunto" id="">
-            <br><br><br>
-        </fieldset><br><br>
-        <br><br>
-        <label for="comentario">Escriba su consulta</label> <br>
-        <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escriba aqui su consulta:"></textarea>
-        <!--placeholder me sirve para agregar comentarios dentro de los "input" o "textarea"-->
-        <br><br>
-        <label for="turno">Seleccione el horario</label> <br>
-        <select name="turno" id="" size="1">
-            <option value="1">Mañana</option>
-            <option value="2">Tarde</option>
-            <option value="3">Vespertino</option>
-            <option value="4">Noche</option>
-        </select> 
-        <br><br><br>
-        <label for="cp">Conocimientos previos</label>
-        <input type="checkbox" name="cp" id="" value="1">HTML
-        <input type="checkbox" name="cp" id="" value="2">CSS
-        <input type="checkbox" name="cp" id="" value="3">JavaScript
-        <input type="checkbox" name="cp" id="" value="4">Ninguno
-        <br><br>
-        <label for="rb">Zona de residencia</label>
-        <input type="radio" name="rd" id="" value="1">CABA
-        <input type="radio" name="rd" id="" value="2">Gran Bs. As.
-        <input type="radio" name="rd" id="" value="3">Provincia de Bs. As.
-        <input type="radio" name="rd" id="" value="4">Interior del pais
-        <br><br>
-        <input type="checkbox" name="condiciones" id="" required>Acepto terminos y condiciones 
+    <main>
         <br>
+        <section class="contenedor_form">
+            <div class="contacto-items">
+                <h2 id="titulo-form">Informacion de Contactos</h2>
+                <form action="https://formspree.io/f/mdkoeblr" method="post">
+                    <div class="datos">     
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="" name="nom" size="15" maxlength="20" required>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="" name="ape" size="15" maxlength="20" required>
+                    </div>
+                    <div>
+                        <label for="dni">DNI:</label>
+                        <input type="number" name="dni" id="" size="15" maxlength="20" required>
+                    </div> 
+                    <div>
+                        <label for="correo">E-mail:</label>
+                        <input type="email" name="cor" id="">
+                    </div>
+                    <div>
+                        <label for="comentario">Consulta</label> <br>
+                        <textarea name="coment" id="textarea" cols="43" rows="15" placeholder="Escriba aqui su consulta:"></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label for="pais">Pais de recidencia</label required>
+                        <select name="pais" id="pais" class="form-select">
+                            <option value="">Pais</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BR">Brasil</option>
+                            <option value="CHL">Chile</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="UY">Uruguay</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="pais">De donde nos consultas?</label required>
+                        <select name="pais" id="pais" class="form-select">
+                            <option value="">Zona</option>
+                            <option value="CA">Caba</option>
+                            <option value="GBA">Gran Bs.As.</option>
+                            <option value="PBA">Provincia de Bs.As.</option>
+                            <option value="IP">Interior del pais</option>
+                        </select>
+                    </div>
+                    <div class="form-terms">
+                        <input type="checkbox" id="term-cond" required>
+                        <label for="term-cond">Acepto los terminos y condiciones</label>
+                    </div>
+                    <div>
+                        <button type="submit" class="boton-enviar" id="btn" name="enviar">  <!-- tengo que ver showAlert-->
+                            <p>ENVIAR</p>   <!--Boton para enviar el formulario-->
+                        </button>
+                        <button type="submit" class="boton-reset" id="btn" name="reset">  <!-- tengo que ver showAlert-->
+                            <p>BORRAR</p>   <!-- Boton para borrar el formulario-->
+                        </button>
+                    </div> 
+                </form>
+            </div>
+        </section>
         <br>
-        <input type="submit" value="Enviar Datos">   <!--Boton para enviar el formulario-->
-        <input type="reset" value="Borrar">  <!-- Boton para borrar el formulario-->
-        <br>
-        <br>
-        <div class="boton">
-            <button class="boton-volver">
-                <a href="../index.html" class="texto-volver">VOLVER</a>
-            </button>
-        </div> 
-    </form>
+        <section>
+            <div class="boton">
+                <button class="boton-volver">
+                    <a href="../index.html" class="texto">Volver</a>
+                </button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+    </main>
+    
+    
 </body>
 
 </html>
