@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .barra_superior {
     display: flex;
     height: 60px;
@@ -25,10 +26,22 @@ body {
 
 .barra_superior img {
     margin-right: 30px;
-
+}
+header nav a img{
+    height: 40px;
+    width: 45px;
+    /*background-color: green;  para identificar los bordes de mi logo*/
 }
 
+header nav a span{
+    /*background-color: red;  para identificar los bordes de mi contador*/
+    align-content: center;
+}
 
+header nav div div a{
+    display: flex;
+    align-items: center; 
+}
 #marca {
     line-height: 60px;
     color: rgb(204, 200, 200);
@@ -36,11 +49,25 @@ body {
     font-family: "Grenze Gotisch", serif;
     font-size: 35px;
 }
+#carrito{
+    margin-left: 890px;
+    margin-right: 3px; /* Espacio entre la imagen y el texto */
+}
+#contador-carrito{
+    color: white;
+    background-color: red;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    width: 22px;
+    aspect-ratio: 1;
+}
 
 img {
     max-width: 90%;
     margin: 10px 21px 10px 21px;
 }
+
 /*****************************************Contenedor del grid*********************************************/
 .contenedor_principal {
     width: 95%;
@@ -107,6 +134,10 @@ margin-left: 95px;
 }
 /************************************************** Responsive ********************************************/
 @media screen and (min-width: 600px) and (max-width: 1023px) {    /*Uso como referencia ipad pro*/
+    #carrito{
+        margin-left: 440px;
+        margin-right: 3px; /* Espacio entre la imagen y el texto */
+    }
 
     .titulo a{
         display: inline-block;
@@ -136,7 +167,11 @@ margin-left: 95px;
         background-color: rgb(52, 52, 67);
         margin-left: 320px;
         border: black solid 2px;
-    }
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+}
     .boton-volver > a{
         margin-left: 30px;
         vertical-align: middle;
@@ -151,6 +186,10 @@ margin-left: 95px;
 }
 
 @media screen and (max-width: 599px) {     /* Media query para pantallas hasta 767px usamos iphone SE como modelo */
+    #carrito{
+        margin-left: 45px;
+        margin-right: 3px; /* Espacio entre la imagen y el texto */
+    }
     .titulo a{
         display: inline-block;
         margin-left: 125px;

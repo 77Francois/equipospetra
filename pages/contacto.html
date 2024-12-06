@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactos</title>
     <link rel="stylesheet" href="../static/css/contacto.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="imagen/x-icon">  <!--no se si es el icono que busco !!!!!!!!!!!!!!!!!!!!!-->
+    <link rel="stylesheet" href="../static/JS/boton-enviar.js"> <!-- para el boton de envio -->
 </head>
 <header>
     <div class="barra_superior">
@@ -23,23 +26,27 @@
         <section class="contenedor_form">
             <div class="contacto-items">
                 <h2 id="titulo-form">Informacion de Contactos</h2>
-                <form action="https://formspree.io/f/mdkoeblr" method="post">
+                <form action="https://formspree.io/f/mdkoeblr" id="formRegister" method="post">
                     <div class="datos">     
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="" name="nom" size="15" maxlength="20" required>
+                        <input type="text" id="campo-nombre" name="nom" size="15" maxlength="20" required>
                     </div>
+                    <div class="error" id="error-nombre"></div>
                     <div>
                         <label for="apellido">Apellido:</label>
-                        <input type="text" id="" name="ape" size="15" maxlength="20" required>
+                        <input type="text" id="campo-apellido" name="ape" size="15" maxlength="20" required>
                     </div>
+                    <div class="error" id="error-apellido"></div>
                     <div>
                         <label for="dni">DNI:</label>
-                        <input type="number" name="dni" id="" size="15" maxlength="20" required>
+                        <input type="number" name="dni" id="campo-dni" size="15" maxlength="20" required>
                     </div> 
+                    <div class="error" id="error-dni"></div>
                     <div>
-                        <label for="correo">E-mail:</label>
-                        <input type="email" name="cor" id="">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="cor" id="campo-email">
                     </div>
+                    <div class="error" id="error-email"></div>
                     <div>
                         <label for="comentario">Consulta</label> <br>
                         <textarea name="coment" id="textarea" cols="43" rows="15" placeholder="Escriba aqui su consulta:"></textarea>
@@ -57,8 +64,8 @@
                         </select>
                     </div>
                     <div class="form-control">
-                        <label for="pais">De donde nos consultas?</label required>
-                        <select name="pais" id="pais" class="form-select">
+                        <label for="zona">De donde nos consultas?</label required>
+                        <select name="zona" id="zona" class="form-select">
                             <option value="">Zona</option>
                             <option value="CA">Caba</option>
                             <option value="GBA">Gran Bs.As.</option>
@@ -95,7 +102,8 @@
             <br>
         </section>
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src ="../static/JS/validacion-contacto.js"></script>
     
 </body>
 

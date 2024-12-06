@@ -113,7 +113,19 @@ input:hover{
     padding: 7px;
     cursor: pointer;
 }
-
+/****************************************** Estilo personalizado para el icono de sweetAlert2 ********************************************************/
+.swal2-icon{
+    width: 68px !important;
+    height: 58px !important; 
+}
+.swal2-title{
+    margin-top: 10px !important;
+    color: red !important;
+    font-size: 28px !important;
+}
+.swal2-popup {
+    width: 300px !important; /* Ancho para la ventana */
+}
 /*************************************************** Boton regresar ******************************************/
 .boton {
     display: block;
