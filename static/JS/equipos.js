@@ -8,31 +8,31 @@ const equipos = [
     {
         id:2,
         nombre: "Compresores",
-        // img: "../img/compresores.png",
+        img: "2.png",
         precio: 7810000,
     },
     {
         id:3,
         nombre: "Motores diesel",
-        // img: "../img/motores-diesel.png",
+        img: "3.png",
         precio: 11510000,
     },
     {
         id:4,
         nombre: "Evaporadores y condensadores",
-        // img: "../img/evaporador.jpg",
+        img: "4.jpeg",
         precio: 9210000,
     },
     {
         id:5,
         nombre: "Refrigeracion domestica",
-        // img: "../img/Aire-Acondicionado.jpeg",
+        img: "5.jpg",
         precio: 7330000, 
     },
     {
         id:6,
         nombre: "Sistemas de seguridad",
-        // img: "../img/seguridad.jpg",
+        img: "6.jpg",
         precio: 519000,
     }
 ]

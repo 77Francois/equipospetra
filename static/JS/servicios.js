@@ -1,18 +1,18 @@
 const contenedorEquipos = document.getElementById("contenedor-equipos");
 
-function crearVentanaCarrito(prodEquipos){  // recibo un areray de prod-equipos
-    prodEquipos.forEach(equipo => {
+function crearVentanaCarrito(){  // recibo un areray de prod-equipos prodEquipos
+    equipos.forEach(equipo => {
         const newEquipo = document.createElement("div");
         newEquipo.classList = "ventana-carrito";
         newEquipo.innerHTML = `
-            <img src="../img/camaras/${equipo.id}.jpg">
-            <h3>${equipo.nombre}</h3>
-            <span>${equipos.precio}</span>
-            <button>Agregar al carrito</button>
-        `
-        
+            <h2>${equipo.nombre}</h2>
+            <img src="../img/camaras/${equipo.img}">
+            <span>${equipo.precio}</span>
+            <br>
+            <button>Agregar</button>
+        ` 
         contenedorEquipos.appendChild(newEquipo);
     });
 }
 
-crearVentanaCarrito(equipos);
+crearVentanaCarrito(); // equipos
