@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="../static/css/sirvicios.css">
+    <link rel="stylesheet" href="../static/css/carrito.css">
     <!-- <script src="../static/JS/equipos.js"></script> -->
-    <script src="../static/JS/servicios.js"></script> <!--referencia a servicios.js--> 
+    <script src="../static/JS/carrito.js" defer></script>
+    <!--<script src="../static/JS/servicios.js" defer></script> referencia a servicios.js--> 
+    <script src="../static/JS/gestionCarrito.js" defer></script>
 </head>
 <header>
     <nav>
@@ -32,15 +35,21 @@
 
 <body>
     <main>
+        <p id="vacio">No hay productos seleccionados! <a href="./equipos-muestra.html">Comprar</a></p>
         <section id="contenedor-equipos"></section>
-        
+        <section id="totales">
+            <p>Unidades totales: <span id="unidades">0</span></p>
+            <p>Total: $<span id="precio">0</span></p>
+            <button id="boton-com-recet" disabled>Comprar</button>
+            <button id="boton-com-recete" >Reiniciar</button>
+        </section>
     </main>
     <br>
     <br>
     <div class="boton">
-        <button class="boton-volver">
+        <div class="boton-volver">
             <a href="../pages/equipos-muestra.html" class="texto-volver">VOLVER</a>
-        </button>
+        </div>
     </div> 
     <br>
     <br>

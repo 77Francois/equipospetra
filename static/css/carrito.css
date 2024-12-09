@@ -1,0 +1,45 @@
+#contenedor-equipos{
+    width: 55%;  /*le doy un ancho para despes poder centrarlo*/
+    margin: auto;  /*lo centro dandole la propiedad auto*/
+}
+.ventana-carrito{
+    display: flex;
+    align-items: center;
+    gap:1.5%;
+}
+
+.ventana-carrito img{
+    height: 95px; /*podria haber usado: aspect-ratio: 1.5;*/
+    width: 150px;
+    border: 3px solid black;
+}
+.ventana-carrito h3{
+    width: 170px;
+}
+#totales, #vacio{
+    text-align: center;
+}
+span{
+    font-size: 18px;
+}
+button{
+    background-color: blue;
+    color: white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#boton-com-recet , #boton-com-recete{
+    background-color: blue;
+    color: white;
+    width: 70px;
+    height: 29px;
+    border-radius: 5px;
+    border: 1.5px solid grey;
+    cursor: pointer;
+}
+.paraOcultar{
+    display: none;
+}
+
+

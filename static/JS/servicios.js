@@ -6,12 +6,16 @@ function crearVentanaCarrito(){  // recibo un areray de prod-equipos prodEquipos
         newEquipo.classList = "ventana-carrito";
         newEquipo.innerHTML = `
             <h2>${equipo.nombre}</h2>
-            <img src="../img/camaras/${equipo.img}">
-            <span>${equipo.precio}</span>
+            <img src="../static/img/camaras/${equipo.img}">
             <br>
-            <button>Agregar</button>
+            <br>
+            <span>$${equipo.precio}</span>
+            <br>
+            <br>
+            <button id="boton-agregar">Agregar</button>
         ` 
         contenedorEquipos.appendChild(newEquipo);
+        newEquipo.getElementsByTagName("button")[0].addEventListener("click",()=> agregarCarrito(equipo))
     });
 }
 

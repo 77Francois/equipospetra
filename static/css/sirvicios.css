@@ -77,11 +77,8 @@ img {
     border: black solid 2px;
     background-color: rgb(247, 247, 252);
     border-radius: 7px 7px 7px 7px;
-    -webkit-border-radius: 7px 7px 7px 7px;
-    -moz-border-radius: 7px 7px 7px 7px;
-    -ms-border-radius: 7px 7px 7px 7px;
-    -o-border-radius: 7px 7px 7px 7px;
 }
+
 .titulo h2{
     text-align: center;
     margin-top: 10px;
@@ -167,11 +164,7 @@ margin-left: 95px;
         background-color: rgb(52, 52, 67);
         margin-left: 320px;
         border: black solid 2px;
-        -webkit-border-radius: 7px;
-        -moz-border-radius: 7px;
-        -ms-border-radius: 7px;
-        -o-border-radius: 7px;
-}
+    }
     .boton-volver > a{
         margin-left: 30px;
         vertical-align: middle;
