@@ -41,5 +41,15 @@ button{
 .paraOcultar{
     display: none;
 }
+#boton-comprar{
+    font-size: 17px;
+    background-color: blue;
+    color: white;
+    width: 90px;
+    height: 39px;
+    border-radius: 5px;
+    border: 1.5px solid grey;
+    cursor: pointer;
+}
 
 

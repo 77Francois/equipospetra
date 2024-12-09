@@ -19,7 +19,7 @@ function crearVentanaCarrito(){  // recibo un array de prod-equipos prodEquipos
                 <span>$${equipo.precio}</span>
                 <div>
                     <button>-</button>
-                    <span class="catidad">${equipo.cantidad}</span>
+                    <span class="cantidad">${equipo.cantidad}</span>
                     <button>+</button>
                 </div>
             `;
@@ -47,19 +47,43 @@ function crearVentanaCarrito(){  // recibo un array de prod-equipos prodEquipos
 crearVentanaCarrito(); // equipos
 actualizarTotales();
 
-function actualizarTotales(){
-    const equipos = JSON.parse(localStorage.getItem("equipos"));
-    let unidades =0;
-    let precio = 0;
-    if(equipos && equipos.length>0){
-        equipos.forEach(equipo => {
-            unidades += equipo.cantidad;
-            precio += equipo.precio * equipo.cantidad;
-        })
-        unidadesElement.innerText = unidades;
-        precioElement.innerText = precio;
-    }
+// function actualizarTotales(){
+//     const equipos = JSON.parse(localStorage.getItem("equipos"));
+//     let unidades =0;
+//     let precio = 0;
+//     if(equipos && equipos.length>0){
+//         equipos.forEach(equipo => {
+//             unidades += equipo.cantidad;
+//             precio += equipo.precio * equipo.cantidad;
+//         });
+//         unidadesElement.innerText = unidades;
+//         precioElement.innerText = precio;
+//     }
+// }   no me gusto la funcion asi !!!
+function actualizarTotales() { 
+    const equipos = JSON.parse(localStorage.getItem("equipos")); 
+    let unidades = 0; 
+    let precio = 0; 
+    if (equipos && equipos.length > 0) { 
+        equipos.forEach(equipo => { 
+            unidades += equipo.cantidad; 
+            precio += equipo.precio * equipo.cantidad; 
+        }); 
+        unidadesElement.innerText = unidades; 
+        precioElement.innerText = precio; 
+        // Mostrar los elementos totales y precios 
+        unidadesElement.parentElement.style.display = "block"; 
+        precioElement.parentElement.style.display = "block"; 
+    } else { 
+        // Ocultar los elementos totales y precios si no hay equipos 
+        unidadesElement.innerText = 0; 
+        precioElement.innerText = 0; 
+        unidadesElement.parentElement.style.display = "none"; 
+        precioElement.parentElement.style.display = "none"; 
+    } 
+    comprar(); 
 }
+
 function comprar(){
     const equip = JSON.parse(localStorage.getItem("equipos"));
     console.log(equip, equip == true);
@@ -68,8 +92,8 @@ function comprar(){
 }
 comprar();
 
-reiniciaCarritoCompras.addEventListener("click",reiniciaCarritoCompras);
-function reiniciaCarritoCompras(){
+reiniciaCarritoComprasElement.addEventListener("click",reiniciarCarritoCompras);
+function reiniciarCarritoCompras(){
     localStorage.removeItem("equipos");
     actualizarTotales();
     crearVentanaCarrito();
