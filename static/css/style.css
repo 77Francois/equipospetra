@@ -493,6 +493,21 @@ body {
     /*centra verticalmente el contenido*/
     margin-left: 2px;
 }
+.boton-gestion {
+    display: flex;
+    width: 100%;   
+}
+.boton-gestion-productos {
+    margin: auto;
+    font-size: 19px;
+    background-color: rgb(7, 7, 88);
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+.texto-gestion{
+    color: white;
+}
 /****************************************************************footer************************************************************/
 .footer_container {
     max-width: 1200px;
