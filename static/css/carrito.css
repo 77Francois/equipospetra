@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     gap:1.5%;
+    /* background-color: red; para referencia*/
 }
 
 .ventana-carrito img{
@@ -51,5 +52,68 @@ button{
     border: 1.5px solid grey;
     cursor: pointer;
 }
+@media screen and (min-width: 600px) and (max-width: 1023px) { /* Uso como referencia huawei mate xt ultimate design para ver el centrado de los elementos*/
+    #contenedor-equipos{
+        width: 100%;  /*le doy un ancho para despes poder centrarlo*/
+        margin-left: 10%;/
+        
+    }
+    .ventana-carrito{
+        display: flex;
+        margin: auto;
+        align-items: center;
+        gap:1.5%;
+    }
+    
+    .ventana-carrito img{
+        height: 115px; /*podria haber usado: aspect-ratio: 1.5;*/
+        width: 200px;
+        border: 3px solid black;
+    }
+    .ventana-carrito h3{
+        width: 170px;
+    }
+}  
+@media screen and (max-width: 599px) {     /* Media query para pantallas hasta 767px usamos iphone SE como modelo */
+    #contenedor-equipos{
+        width: 100%;  /*le doy un ancho para despes poder centrarlo*/
+        /* margin-left: 10%;/ */
+        
+    }
+    .ventana-carrito{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        gap: 10px;
+    } 
+    .ventana-carrito img{
+        height: 185px; /*podria haber usado: aspect-ratio: 1.5;*/
+        width: 280px;
+        border: 3px;
+    }
+    .ventana-carrito h3{
+        text-align: center;
+        width: 260px;
+        /* background-color: red; para poder identificar contenedores */
+        font-size: 27px;
+    }
+    #totales, #vacio{
+        margin-top: 25px;
+        text-align: center;
+        font-size: 30px;
 
+    }
+    span{
+        font-size: 24px;
+    }
+    button{
+        background-color: blue;
+        color: white;
+        width: 39px;
+        height: 39px;
+        cursor: pointer;
+    }
 
+}
+    

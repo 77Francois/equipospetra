@@ -1,6 +1,6 @@
 const contenedorEquipos = document.getElementById("contenedor-equipos");
 
-function crearVentanaCarrito(){  // recibo un areray de prod-equipos prodEquipos
+function crearVentanaCarrito(){  // recibo un array de prod-equipos prodEquipos
     equipos.forEach(equipo => {
         const newEquipo = document.createElement("div");
         newEquipo.classList = "ventana-carrito";

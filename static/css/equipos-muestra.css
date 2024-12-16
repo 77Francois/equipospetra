@@ -28,7 +28,10 @@ h2{
 span{
     margin: 10px 0;
 }
-
+.boton{
+    display: flex;
+    margin: auto;
+}
 #boton-agregar{
     background-color: rgb(5, 5, 104);
     color: white;

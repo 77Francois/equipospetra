@@ -120,7 +120,7 @@ function muestraProductos() {
                 <td>${prod.producto}</td>
                 <td>${prod.precio}</td>
                 <td>
-                    <img src="${prod.imagen}" alt="${prod.producto}" width="80px" height="129px">
+                    <img src="${prod.imagen}" alt="${prod.producto}" width="140px" height="129px">
                 </td>
                 <td>
                     <button class="boton-borrar" onclick="borrarProducto(${prod.id})">BORRAR</button>
